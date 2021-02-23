@@ -1,31 +1,18 @@
 ---
-date: "2016-11-05T18:25:22+05:30"
+date: "2019-01-05T18:25:22+05:30"
 draft: false
-image: img/portfolio/a4-paper.jpg
-showonlyimage: true
-title: Name of the work 1
+image: /projects/work1_files/evan-dorian-9t5nra8VDo4-unsplash.jpg
+showonlyimage: false
+title: PhD Thesis
 weight: 0
 ---
 
-Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-<!--more-->
+My thesis looked at the effects of mindfulness in sport and performance settings. It included:
 
-Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+1.  a [systematic review of studies that explore mindfulness in athletes](https://www.tandfonline.com/doi/abs/10.1080/1750984X.2017.1387803);
+2.  [machine learning methods for making short questionnaires](https://www.sciencedirect.com/science/article/abs/pii/S1469029218306757), with a mindfulness case study; and
+3.  [a double-blinded randomised experiment that tested a brief mindfulness induction in athletes](https://psyarxiv.com/8bk7m/)
 
-A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+Ultimately, I think the key lessons were that mindfulness isn't the panacea that many make it out to be. The research is developing but overall, pretty low quality. It's a low cost and moderate reward string in the bow of a high-performer, but can't be relied upon as a silver bullet.
 
-1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-2. Aliquam tincidunt mauris eu risus.
-
-> The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
-
-## Header Level 2
-
-Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-
-The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
-
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-* Aliquam tincidunt mauris eu risus.
-
-When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then  
+People struggling with insomnia can read the whole thesis [here](https://acuresearchbank.acu.edu.au/item/85xv5/mindfulness-and-acceptance-approaches-to-athletic-performance).

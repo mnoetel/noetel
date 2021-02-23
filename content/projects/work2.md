@@ -1,31 +1,14 @@
 ---
 date: "2016-11-05T19:41:01+05:30"
 draft: false
-image: img/portfolio/business-card-26.jpg
+image: /projects/work2_files/np_fire_1895965_3C1053.png
 showonlyimage: false
-title: Name of the work 2
+title: INSPIRE
 weight: 1
 ---
 
-When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.
-<!--more-->
+## Our Approach to Making Good Teaching Decisions
 
-Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+As a teacher at a university, there are hundreds of little decisions that add up to a radically different student experience. You need to choose learning objectives, choose assessments, choose learning activities, and choose how to present content.
 
-A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-
-1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-2. Aliquam tincidunt mauris eu risus.
-
-> The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
-
-## Header Level 2
-
-Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-
-The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
-
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-* Aliquam tincidunt mauris eu risus.
-
-When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then  
+INSPIRE is fundamentally about helping you to choose the best teaching strategies---to choose the ones that work, rather than the ones that don't. You can see a summary of the project and our pilot website [here: INSPIRE your students with evidence-based teaching.](https://www.notion.so/inspireprogram/INSPIRE-7f7d944e6ccd4d0691231b1984e9d7fa)
