@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Dr Michael Noetel</title>
-    <link>https://notel.com.au/categories/</link>
+    <link>https://noetel.com.au/categories/</link>
     <description>Recent content in Categories on Dr Michael Noetel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://notel.com.au/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://noetel.com.au/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>R</title>
-      <link>https://notel.com.au/categories/r/</link>
+      <link>https://noetel.com.au/categories/r/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>https://notel.com.au/categories/r/</guid>
+      <guid>https://noetel.com.au/categories/r/</guid>
       <description></description>
     </item>
     

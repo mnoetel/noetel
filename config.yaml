@@ -7,7 +7,7 @@ googleAnalytics: 'G-GE7K0MXWFF'
 params:
   copyright: '&copy;2021 Michael Noetel'
   description: Describe your website
-  email: "noetel[at]gmail[dot]com"
+  email: "noetel@gmail.com"
   navlinks:
     - home: yes
       name: Home
