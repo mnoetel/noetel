@@ -1,0 +1,16 @@
+---
+date: "2016-11-06T13:00:25+05:30"
+title: Get in touch
+---
+
+#### I'm most interested in helping:
+
+-   people with ambitious for-purpose projects that aim to change behaviour at scale
+-   people trying to figure out what works to solve the world's most pressing problems
+-   people trying to synthesise complex secondary data sets
+
+#### I might be able to help you by...
+
+-   translating top-level evidence into behaviour change using evidence-based multimedia design + engaging, effective training programs
+-   conducting efficient, effective, and robust systematic reviews / overviews of reviews
+-   running sophisticated meta-analytic techniques like network meta-analysis or <a href = "https://cran.r-project.org/web/packages/metaSEM/vignettes/Examples.html">meta-analytic structural equation models</a>

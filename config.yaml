@@ -1,0 +1,27 @@
+baseurl: https://notel.com.au/
+title: Dr Michael Noetel
+theme: hugo-creative-portfolio-theme
+languageCode: en-us
+disqusShortname: 'mnoetel'
+googleAnalytics: 'G-GE7K0MXWFF'
+params:
+  copyright: '&copy;2021 Michael Noetel'
+  description: Describe your website
+  email: "noetel[at]gmail[dot]com"
+  navlinks:
+    - home: yes
+      name: Home
+      url: projects/
+    - name: Resume
+      url: /mnoetel_resume.pdf
+    - name: Get in touch
+      url: contact/
+  sidebarAbout:
+    - <img src="/./config_files/mnoetel_circle.png" alt="Michael Noetel Round Profile Picture" width="50%"/>
+    - I'm an academic, performance psychologist, and effective altruist. I want to work toward solving the world's most pressing problems using evidence-synthesis, knowledge translation, and behaviour change. Basically, I want to help people making important decisions use the best evidence to change behaviour. See my <a href="https://scholar.google.com.au/citations?hl=en&user=RAe4W2QAAAAJ">publications here</a>.
+    - Originally from Sydney but fell in love with a Queenslander. Proud dad of a little T-Rex.
+  social:
+    email: noetel@gmail.com
+    youtube: "https://www.youtube.com/c/NoetelAu/"
+    twitter: "https://twitter.com/mnoetel"
+  style: "red"
