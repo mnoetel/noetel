@@ -16,3 +16,5 @@ My thesis looked at the effects of mindfulness in sport and performance settings
 Ultimately, I think the key lessons were that mindfulness isn't the panacea that many make it out to be. The research is developing but overall, pretty low quality. It's a low cost and moderate reward string in the bow of a high-performer, but can't be relied upon as a silver bullet.
 
 People struggling with insomnia can read the whole thesis [here](https://acuresearchbank.acu.edu.au/item/85xv5/mindfulness-and-acceptance-approaches-to-athletic-performance).
+
+{{< youtube PFZ3osJhzNw >}}
