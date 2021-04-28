@@ -15,8 +15,8 @@ As a teacher at a university, there are hundreds of little decisions that add up
 
 INSPIRE is fundamentally about helping you to choose the best teaching strategies---to choose the ones that work, rather than the ones that don't. You can see a summary of the project and our pilot website [here: INSPIRE your students with evidence-based teaching.](https://www.notion.so/inspireprogram/INSPIRE-7f7d944e6ccd4d0691231b1984e9d7fa)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xwWQ7JabeIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="xwWQ7JabeIE" title="Why INSPIRE" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xwWQ7JabeIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="RHSM8rsu5lk" title="What INSPIRE does" >}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xwWQ7JabeIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="7oNDmVGBRNI" title="How INSPIRE hopes to help you" >}}

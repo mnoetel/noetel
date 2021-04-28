@@ -19,4 +19,8 @@ Systematic reviews are the core of [evidence-informed decision-making](https://w
 6.  [The Impact Of Physical Activity On Brain Structure And Function In Youth: A Systematic Review.](https://pediatrics.aappublications.org/content/144/4/e20184032) Pediatrics. Impact Factor: 5.515 
 7.  [The Effects Of Vigorous Intensity Exercise In The Third Trimester Of Pregnancy: A Systematic Review And Meta-Analysis.](https://bmcpregnancychildbirth.biomedcentral.com/articles/10.1186/s12884-019-2441-1) BMC Pregnancy and Childbirth. Impact Factor: 3.082
 
+## Video summaries
+
+{{< youtube id="jtA0CJj_tQw" title="Vigorous exercise is safe during pregnancy: results from a systematic review and meta-analysis" >}}
+
 *Photo by [Mark Boss](https://unsplash.com/@vork?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/library-modern-books?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*

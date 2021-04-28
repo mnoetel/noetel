@@ -2,7 +2,7 @@ baseurl: https://noetel.com.au/
 title: Dr Michael Noetel
 theme: hugo-creative-portfolio-theme
 languageCode: en-us
-disqusShortname: 'mnoetel'
+disqusShortname: ''
 googleAnalytics: 'G-GE7K0MXWFF'
 params:
   copyright: '&copy;2021 Michael Noetel'
