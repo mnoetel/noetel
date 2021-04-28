@@ -7,7 +7,7 @@ title: Knowledge Translation
 weight: 5
 ---
 
-I think there's so much wisdom trapped in universities. Often, getting that knowledge out into practice can save lives.
+I think there's so much wisdom trapped in universities. Often, getting that knowledge out into practice can save lives.<!--more-->
 
 {{< youtube id="Qvfz-OcgF3E" title="Introducing The STUDIO: Scaling Translation from Universities by Designing Innovations Online" >}}
 

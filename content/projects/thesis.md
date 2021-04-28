@@ -7,9 +7,7 @@ title: PhD Thesis
 weight: 0
 ---
 
-My thesis looked at the effects of mindfulness in sport and performance settings.
-
-The thesis included:
+My thesis looked at the effects of mindfulness in sport and performance settings.<!--more-->The thesis included:
 
 1.  a [systematic review of studies that explore mindfulness in athletes](https://www.tandfonline.com/doi/abs/10.1080/1750984X.2017.1387803);
 2.  [machine learning methods for making short questionnaires](https://www.sciencedirect.com/science/article/abs/pii/S1469029218306757), with a mindfulness case study; and

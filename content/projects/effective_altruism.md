@@ -7,7 +7,7 @@ title: Effective Altruism
 weight: 2
 ---
 
-I am interested in questions that focus on [impartially improving welfare](https://80000hours.org/key-ideas/#impartial-concern). I am increasingly focused on research that is [important, neglected, and tractable](https://concepts.effectivealtruism.org/concepts/importance-neglectedness-tractability/), with a [long-term view of the future](https://80000hours.org/key-ideas/#longtermism).
+I am interested in questions that focus on [impartially improving welfare](https://80000hours.org/key-ideas/#impartial-concern). I am increasingly focused on research that is [important, neglected, and tractable](https://concepts.effectivealtruism.org/concepts/importance-neglectedness-tractability/), with a [long-term view of the future](https://80000hours.org/key-ideas/#longtermism).<!--more-->
 
 ## EA Activities
 

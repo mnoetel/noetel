@@ -7,8 +7,7 @@ title: INSPIRE
 weight: 1
 ---
 
-INSPIRE is about [knowledge translation](https://noetel.com.au/projects/knowledge_translation/) for university teaching. How do we take the best evidence on what works for teaching and learning so we can apply it in practice?
-
+INSPIRE is about [knowledge translation](https://noetel.com.au/projects/knowledge_translation/) for university teaching. How do we take the best evidence on what works for teaching and learning so we can apply it in practice?<!--more-->
 ## Why and how of INSPIRE
 
 As a teacher at a university, there are hundreds of little decisions that add up to a radically different student experience. You need to choose learning objectives, choose assessments, choose learning activities, and choose how to present content.
