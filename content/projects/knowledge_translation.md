@@ -3,11 +3,15 @@ date: "2021-04-28T19:53:42+05:30"
 draft: false
 image: img/portfolio/seacliff_bridge.jpg
 showonlyimage: false
-title: Knowledge translation 5
+title: Knowledge Translation
 weight: 5
 ---
 
-I think there's so much wisdom trapped in universities. Often, getting that knowledge out into practice can save lives. For why I think this is important, see this pitch [I made to our university in 2021](https://youtu.be/Qvfz-OcgF3E):
+I think there's so much wisdom trapped in universities. Often, getting that knowledge out into practice can save lives.
+
+\<embed STUDIO video\>
+
+*This is a pitch [I made to our university in 2021](https://youtu.be/Qvfz-OcgF3E) for why I think knowledge translation is so important*
 
 Many of my projects have been about translating academic knowledge into practice. By using my skills in online learning, I've been able to help those projects have impact cost-effectively and at scale. For example:
 
@@ -17,5 +21,7 @@ Many of my projects have been about translating academic knowledge into practice
 4.  [Ahead of the Game](https://journals.lww.com/acsm-msse/Fulltext/2021/01000/An_Intervention_for_Mental_Health_Literacy_and.17.aspx) improved [resilience, well-being and mental health literacy](https://journals.lww.com/acsm-msse/Fulltext/2021/01000/An_Intervention_for_Mental_Health_Literacy_and.17.aspx) with a blended learning intervention targeting adolescent athletes. It's now been scaled up as part of [the national suicide prevention effort](https://aheadofthegame.org.au/)
 
 In all of these projects, I was responsible for the multimedia and online learning at the core of the intervention. Here's a summary of the key approaches I used:
+
+\<embed iPLAY video\>
 
 *Photo by [Silas Baisch](https://unsplash.com/@silasbaisch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/bridge?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*

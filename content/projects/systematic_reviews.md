@@ -7,7 +7,9 @@ title: Systematic Reviews
 weight: 4
 ---
 
-Systematic reviews are the core of [evidence-informed decision-making](https://www.alliance4usefulevidence.org/assets/Science-of-Using-Science-Final-Report-2016.pdf). I've developed expertise in all parts of conducting a range of systematic reviews, meta-analyses, and meta-reviews (a.k.a., overviews of reviews). These have manifest in a range of high-impact publications:
+Systematic reviews are the core of [evidence-informed decision-making](https://www.alliance4usefulevidence.org/assets/Science-of-Using-Science-Final-Report-2016.pdf). I've developed expertise in all parts of conducting a range of systematic reviews, meta-analyses, and meta-reviews (a.k.a., overviews of reviews).
+
+## Publications
 
 1.  [Video Improves Learning In Higher Education: A Systematic Review.](https://journals.sagepub.com/doi/abs/10.3102/0034654321990713) Review of Educational Research. Impact Factor: 8.241
 2.  [School-Based Interventions Modestly Increase Physical Activity And Cardiorespiratory Fitness But Are Least Effective For Youth Who Need Them Most: An Individual Participant Pooled Analysis of 20 Controlled Trials.](https://bjsm.bmj.com/content/early/2021/01/20/bjsports-2020-102740) British Journal of Sports Medicine. Impact Factor: 7.867 
