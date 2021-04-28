@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://noetel.com.au/projects/work2/</loc>
-    <lastmod>2016-11-05T19:41:01+05:30</lastmod>
+    <loc>https://noetel.com.au/projects/inspire/</loc>
+    <lastmod>2021-04-28T19:41:01+05:30</lastmod>
   </url><url>
-    <loc>https://noetel.com.au/projects/work3/</loc>
-    <lastmod>2016-11-05T19:44:32+05:30</lastmod>
+    <loc>https://noetel.com.au/projects/effective_altruism/</loc>
+    <lastmod>2021-04-28T19:44:32+05:30</lastmod>
   </url><url>
-    <loc>https://noetel.com.au/projects/work4/</loc>
+    <loc>https://noetel.com.au/projects/systematic_reviews/</loc>
     <lastmod>2016-11-05T19:50:47+05:30</lastmod>
   </url><url>
-    <loc>https://noetel.com.au/projects/work5/</loc>
-    <lastmod>2016-11-05T19:53:42+05:30</lastmod>
+    <loc>https://noetel.com.au/projects/knowledge_translation/</loc>
+    <lastmod>2021-04-28T19:53:42+05:30</lastmod>
   </url><url>
-    <loc>https://noetel.com.au/projects/work6/</loc>
+    <loc>https://noetel.com.au/projects/video_multimedia/</loc>
     <lastmod>2016-11-05T19:56:17+05:30</lastmod>
   </url><url>
     <loc>https://noetel.com.au/projects/work7/</loc>
@@ -32,10 +32,16 @@
     <loc>https://noetel.com.au/projects/work11/</loc>
     <lastmod>2016-11-05T20:23:59+05:30</lastmod>
   </url><url>
-    <loc>https://noetel.com.au/categories/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
     <loc>https://noetel.com.au/</loc>
+    <lastmod>2021-04-28T19:53:42+05:30</lastmod>
+  </url><url>
+    <loc>https://noetel.com.au/projects/</loc>
+    <lastmod>2021-04-28T19:53:42+05:30</lastmod>
+  </url><url>
+    <loc>https://noetel.com.au/projects/thesis/</loc>
+    <lastmod>2021-04-28T18:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://noetel.com.au/categories/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://noetel.com.au/post/2020-12-01-r-rmarkdown/</loc>
@@ -59,16 +65,7 @@
     <loc>https://noetel.com.au/tags/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://noetel.com.au/projects/work1/</loc>
-    <lastmod>2019-01-05T18:25:22+05:30</lastmod>
-  </url><url>
-    <loc>https://noetel.com.au/projects/</loc>
-    <lastmod>2019-01-05T18:25:22+05:30</lastmod>
-  </url><url>
     <loc>https://noetel.com.au/contact/</loc>
     <lastmod>2016-11-06T13:00:25+05:30</lastmod>
-  </url><url>
-    <loc>https://noetel.com.au/about/</loc>
-    <lastmod>2016-11-05T21:05:33+05:30</lastmod>
   </url>
 </urlset>
