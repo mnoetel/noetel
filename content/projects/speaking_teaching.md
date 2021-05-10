@@ -21,6 +21,6 @@ Knowledge, like happiness, is best when shared. I love teaching both inside and 
 
 In addition, I have demonstrated a consistent track record of high student evaluations:
 
-![](images/selts_plot.png "Average rating from almost 3,000 students: 4.8/5"){width="640" height="205"}
+{{< figure src="images/selts_plot.png" title="Average rating from almost 3,000 students: 4.8/5" >}}
 
 *Photo by [Miguel Henriques](https://unsplash.com/@miguel_photo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/lecture-hall?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
