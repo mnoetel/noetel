@@ -7,7 +7,7 @@ title: Effective Altruism
 weight: 2
 ---
 
-I am interested in questions that focus on [impartially improving welfare](https://80000hours.org/key-ideas/#impartial-concern). I am increasingly focused on research that is [important, neglected, and tractable](https://concepts.effectivealtruism.org/concepts/importance-neglectedness-tractability/), with a [long-term view of the future](https://80000hours.org/key-ideas/#longtermism).<!--more-->
+I am interested in questions that focus on [impartially improving welfare](https://80000hours.org/key-ideas/#impartial-concern). I am increasingly focused on research that is [important, neglected, and tractable](https://concepts.effectivealtruism.org/concepts/importance-neglectedness-tractability/), with a [long-term view of the future](https://80000hours.org/key-ideas/#longtermism).<!--more--> I have taken the [Giving What We Can pledge](https://www.givingwhatwecan.org/) to donate at least 10% of my income to the most effective causes. 
 
 ## EA Activities
 
