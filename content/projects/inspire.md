@@ -4,7 +4,7 @@ draft: false
 image: /projects/work2_files/np_fire_1895965_3C1053.png
 showonlyimage: false
 title: INSPIRE
-weight: 1
+weight: 2
 ---
 
 INSPIRE is about [knowledge translation](https://noetel.com.au/projects/knowledge_translation/) for university teaching. How do we take the best evidence on what works for teaching and learning so we can apply it in practice?<!--more-->

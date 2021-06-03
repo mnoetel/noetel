@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://noetel.com.au/projects/inspire/</loc>
-    <lastmod>2021-04-28T19:41:01+05:30</lastmod>
-  </url><url>
     <loc>https://noetel.com.au/projects/effective_altruism/</loc>
     <lastmod>2021-04-28T19:44:32+05:30</lastmod>
+  </url><url>
+    <loc>https://noetel.com.au/projects/inspire/</loc>
+    <lastmod>2021-04-28T19:41:01+05:30</lastmod>
   </url><url>
     <loc>https://noetel.com.au/projects/systematic_reviews/</loc>
     <lastmod>2016-11-05T19:50:47+05:30</lastmod>

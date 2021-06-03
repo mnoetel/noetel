@@ -4,10 +4,10 @@ draft: false
 image: img/portfolio/ea.png
 showonlyimage: false
 title: Effective Altruism
-weight: 2
+weight: 1
 ---
 
-I am interested in questions that focus on [impartially improving welfare](https://80000hours.org/key-ideas/#impartial-concern). I am increasingly focused on research that is [important, neglected, and tractable](https://concepts.effectivealtruism.org/concepts/importance-neglectedness-tractability/), with a [long-term view of the future](https://80000hours.org/key-ideas/#longtermism).<!--more--> I have taken the [Giving What We Can pledge](https://www.givingwhatwecan.org/) to donate at least 10% of my income to the most effective causes. 
+I am interested in questions that focus on [impartially improving welfare](https://80000hours.org/key-ideas/#impartial-concern). I am increasingly focused on research that is [important, neglected, and tractable](https://concepts.effectivealtruism.org/concepts/importance-neglectedness-tractability/), with a [long-term view of the future](https://80000hours.org/key-ideas/#longtermism).<!--more--> I have taken the [Giving What We Can pledge](https://www.givingwhatwecan.org/) to donate at least 10% of my income to the most effective causes. The best summary of my views on effective altruism [is this article I published on the ABC](https://www.abc.net.au/religion/the-case-for-effective-altruism/13359912).
 
 ## EA Activities
 
