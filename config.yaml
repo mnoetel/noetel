@@ -7,7 +7,7 @@ googleAnalytics: 'G-GE7K0MXWFF'
 params:
   copyright: '&copy;2021 Michael Noetel'
   description: Dr Michael Noetel, Researcher, Teacher, Performance Psychologist, Effective Altruist
-  email: " "
+  email: ""
   navlinks:
     - home: yes
       name: Home
