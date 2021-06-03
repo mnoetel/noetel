@@ -17,6 +17,4 @@ title: Get in touch
 -   running sophisticated meta-analytic techniques like network meta-analysis or <a href = "https://cran.r-project.org/web/packages/metaSEM/vignettes/Examples.html">meta-analytic structural equation models</a>
 -   being an <a href = "https://www.nature.com/articles/d41586-019-01184-9">agile</a>, autonomy supportive <a href = "https://psycnet.apa.org/record/2018-24069-001">leader</a> and <a href = "https://www.sciencedirect.com/science/article/abs/pii/S0001879120300841">supervisor</a>
 
-#### Contact me:
-
--   Via email: <a href="mailto:noetel@gmail.com">noetel@gmail.com</a>
+The best way to get in contact is via <a href = "mailto: noetel@gmail.com">email</a>.
