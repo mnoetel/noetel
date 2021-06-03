@@ -6,7 +6,7 @@ disqusShortname: ''
 googleAnalytics: 'G-GE7K0MXWFF'
 params:
   copyright: '&copy;2021 Michael Noetel'
-  description: Describe your website
+  description: Dr Michael Noetel, Researcher, Teacher, Performance Psychologist, Effective Altruist
   email: "noetel@gmail.com"
   navlinks:
     - home: yes
@@ -25,3 +25,8 @@ params:
     youtube: "https://www.youtube.com/c/NoetelAu/"
     twitter: "https://twitter.com/mnoetel"
   style: "red"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
