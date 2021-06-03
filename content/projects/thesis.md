@@ -4,7 +4,7 @@ draft: false
 image: /projects/work1_files/evan-dorian-9t5nra8VDo4-unsplash.jpg
 showonlyimage: false
 title: PhD Thesis
-weight: 0
+weight: 10
 ---
 
 My thesis looked at the effects of mindfulness in sport and performance settings.<!--more-->The thesis included:
