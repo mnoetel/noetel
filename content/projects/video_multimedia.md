@@ -7,7 +7,7 @@ title: Video and Multimedia
 weight: 6
 ---
 
-Multimedia is the lingua franca of modern education. I've published [meta-analyses showing it's a great way of teaching, especially at scale](https://journals.sagepub.com/doi/10.3102/0034654321990713). Most of my [knowledge translations projects](https://noetel.com.au/projects/knowledge_translation/) have heavily leveraged video and multimedia. I have 'full-stack' video production skills from scripting, co-ordination, videography, graphics, and editing.<!--more-->
+Multimedia is the lingua franca of modern education. I've published [meta-analyses showing it's a great way of teaching, especially at scale](https://journals.sagepub.com/doi/10.3102/0034654321990713). I've also published articles in the [SJR \#1 Education journal](https://journals.sagepub.com/doi/abs/10.3102/00346543211052329?journalCode=rera) on [how to use multimedia well](https://twitter.com/mnoetel/status/1452433655545024514). Most of my [knowledge translations projects](https://noetel.com.au/projects/knowledge_translation/) have heavily leveraged multimedia as part of a dynamic online learning environment. I have 'full-stack' online learning design skills from producing multimedia, designing systems for online skill development and feedback, to project management.<!--more-->
 
 ## Video works and can scale
 

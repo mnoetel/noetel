@@ -11,13 +11,14 @@ Knowledge, like happiness, is best when shared. I love teaching both inside and 
 
 ## Teaching Awards
 
-1.  Citation for Outstanding Contributions to Student Learning, Australian Awards for University Teaching
-2.  Senior Fellow, Higher Education Academic (SFHEA), AdvanceHE
-3.  Citations for Outstanding Contributions to Student Learning, Australian Catholic University
-4.  Citation for Outstanding Contribution to Learning and Teaching (Team Award), Australian Catholic University, Faculty of Health Sciences
-5.  Citations (Early Career) for Outstanding Contributions to Student Learning, Australian Catholic University
-6.  Citations (Early Career) for Outstanding Contributions to Student Learning, Australian Catholic University, Faculty of Health Sciences
-7.  Official Commendation for Teaching Excellence, Faculty of Social and Behavioural Science, University of Queensland
+1.  Vice-Chancellor's Award for Excellence in Teaching, Australian Catholic University
+2.  Citation for Outstanding Contributions to Student Learning, Australian Awards for University Teaching
+3.  Senior Fellow, Higher Education Academic (SFHEA), AdvanceHE
+4.  Citations for Outstanding Contributions to Student Learning, Australian Catholic University
+5.  Citation for Outstanding Contribution to Learning and Teaching (Team Award), Australian Catholic University, Faculty of Health Sciences
+6.  Citations (Early Career) for Outstanding Contributions to Student Learning, Australian Catholic University
+7.  Citations (Early Career) for Outstanding Contributions to Student Learning, Australian Catholic University, Faculty of Health Sciences
+8.  Official Commendation for Teaching Excellence, Faculty of Social and Behavioural Science, University of Queensland
 
 In addition, I have demonstrated a consistent track record of high student evaluations:
 
