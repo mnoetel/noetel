@@ -19,7 +19,7 @@ I am interested in questions that focus on [impartially improving welfare](https
 
     3.  [Survey of COVID-19 Responses to Understand Behaviour (SCRUB)](https://www.scrubcovid19.org/) and derivative papers [(e.g., Bradshaw et al., 2021)](https://www.frontiersin.org/articles/10.3389/fpsyg.2020.591638/full)
 
-2.  On the board of directors at [Effective Altruism Australia](https://effectivealtruism.org.au/)
+2.  Chair of the board at [Effective Altruism Australia](https://effectivealtruism.org.au/)
 
 ## READI Projects
 
