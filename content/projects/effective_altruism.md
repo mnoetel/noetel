@@ -7,7 +7,7 @@ title: Effective Altruism
 weight: 1
 ---
 
-I am interested in questions that focus on [impartially improving welfare](https://80000hours.org/key-ideas/#impartial-concern). I am increasingly focused on research that is [important, neglected, and tractable](https://concepts.effectivealtruism.org/concepts/importance-neglectedness-tractability/), with a [long-term view of the future](https://80000hours.org/key-ideas/#longtermism).<!--more--> I have taken the [Giving What We Can pledge](https://www.givingwhatwecan.org/) to donate at least 10% of my income to the most effective causes. The best summary of my views on effective altruism [is this article I published on the ABC](https://www.abc.net.au/religion/the-case-for-effective-altruism/13359912).
+I am interested in questions that focus on [impartially improving welfare](https://80000hours.org/key-ideas/#impartial-concern). I am increasingly focused on research that is [important, neglected, and tractable](https://concepts.effectivealtruism.org/concepts/importance-neglectedness-tractability/), with a [long-term view of the future](https://80000hours.org/key-ideas/#longtermism).<!--more--> I have taken the [Giving What We Can pledge](https://www.givingwhatwecan.org/) to donate at least 10% of my income to the most effective causes. The best summary of my views on effective altruism [is this article I published on the ABC](https://www.abc.net.au/religion/the-case-for-effective-altruism/13359912). For longtermism, see [my review of What We Owe the Future in The Conversation](https://theconversation.com/what-do-we-owe-future-generations-and-what-can-we-do-to-make-their-world-a-better-place-189591)
 
 ## EA Activities
 
@@ -20,6 +20,9 @@ I am interested in questions that focus on [impartially improving welfare](https
     3.  [Survey of COVID-19 Responses to Understand Behaviour (SCRUB)](https://www.scrubcovid19.org/) and derivative papers [(e.g., Bradshaw et al., 2021)](https://www.frontiersin.org/articles/10.3389/fpsyg.2020.591638/full)
 
 2.  Chair of the board at [Effective Altruism Australia](https://effectivealtruism.org.au/)
+
+{{< youtube id="efVh51hbRHY" title="How to do more good" >}}
+
 
 ## READI Projects
 
