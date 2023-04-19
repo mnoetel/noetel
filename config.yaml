@@ -13,7 +13,7 @@ params:
       name: Home
       url: projects/
     - name: Resume
-      url: /mnoetel_resume.pdf
+      url: /mnoetel_resume.html
     - name: Get in touch
       url: contact/
   sidebarAbout:
