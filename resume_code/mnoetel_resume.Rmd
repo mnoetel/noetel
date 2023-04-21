@@ -1,0 +1,1187 @@
+---
+title: "Michael Noetel's resume"
+author: Michael Noetel
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    self_contained: true
+    css: 
+      - override.css
+---
+
+```{css, echo=FALSE}
+.pagedjs_page:not(:first-of-type) {
+  --sidebar-width: 0rem;
+  --sidebar-background-color: #ffffff;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --decorator-horizontal-margin: 0.2in;
+}
+```
+
+```{r data-load, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse); library(pagedown); library(rcrossref); library(cli); library(rscopus)
+
+# Mike
+scopus_id <- "57190857713"
+#Zan
+#scopus_id <- "55584127400"
+# Remember to sign into the VPN to get the API to work
+api_key <-  Sys.getenv('Elsevier_API')
+df <- author_data(au_id = scopus_id,
+                   verbose = FALSE)
+pubs <- df$df %>%
+  janitor::clean_names() %>%
+  filter(subtype_description != "Erratum") %>%
+  select(-fa:-eid,
+         -pubmed_id:-au_id,
+         -dc_description) %>%
+  rename(journal = prism_publication_name,
+         doi = prism_doi,
+         title = dc_title,
+         volume = prism_volume,
+         issue = prism_issue_identifier,
+         cites = citedby_count,
+         first_author = dc_creator) %>%
+  filter(journal != "ACU Research Bank" & 
+           journal != "BehaviourWorks Australia" &
+           journal != "The Health & Fitness Journal of Canada") %>% 
+  mutate(year = year(as.Date(prism_cover_date))) %>%
+  filter(!is.na(year)) %>% #filter(year < 2020) %>%
+  mutate(number = ifelse(is.na(volume),
+                         "",
+                         paste0("*",volume,"*","(",issue,")"))) %>%
+  mutate(number = gsub("\\(NA\\)","",number),
+         journal = paste0("*",journal,"*"),
+         cite_word = ifelse(cites == 1, "citation","citations"),
+         cite_word = ifelse(cites == 0, "", cite_word),
+         cites = as.numeric(cites),
+         first_author = paste0(first_author, ", et al."),
+         doi = paste0("https://doi.org/", doi),
+         title = paste0("<a href = '",
+                      doi,
+                      "'>",
+                      title,
+                      "</a>")) %>%
+  arrange(desc(year), desc(cites))
+
+total_citations = sum(pubs$cites)
+# pubs$impact <- paste("Impact Factor: ", pubs$impact, sep = "")
+# pubs$impact = ifelse(pubs$impact == "Impact Factor: NA", "", pubs$impact)
+
+calc_h_index = function(cites) {
+  if(max(cites) == 0) return(0) # assuming this is reasonable
+  cites = cites[order(cites, decreasing = TRUE)]
+  tail(which(cites >= seq_along(cites)), 1)
+}
+h_index <- calc_h_index(pubs$cites)
+m_index <- h_index / (lubridate::interval("2015-10-10", Sys.time()) / lubridate::years(1))
+#m_index <- h_index / (lubridate::interval("2019-05-10", Sys.time()) / lubridate::years(1))
+
+pubs$cites = ifelse(pubs$cites == 0, "N/A", paste("---",pubs$cites))
+
+#pubs$journal <- stringr::str_to_title(pubs$journal)
+
+pattern = "### {first_author} ({year}). {title}. {journal}, {number}
+
+{cites} {cite_word}
+
+N/A
+
+{year}
+
+"
+fix_grammar = function(x) gsub("(?<!\\.)\\.\\.(?!\\.)","\\.",x, perl = T) %>% gsub("\\?\\.","\\?",.)
+# regex interpretation. Match two dots and replace with one, if there's not an extra dot before, or after the two (three dots is a row).
+publications = glue::glue(pattern, .envir = as.environment(pubs)) %>% 
+   fix_grammar
+
+
+```
+
+# Aside
+
+<img src="mnoetel_circle.png" alt="Dr Michael Noetel"/>
+
+## Contact Info {#contact}
+
+-   <i class="fa fa-envelope"></i> [michael.noetel\@acu.edu.au](mailto:michael.noetel@acu.edu.au){.email}
+-   <i class="fa fa-globe-asia"></i> [Website](http://noetel.com.au)
+-   <i class="fa fa-phone"></i> +61 414 822 353
+-   <i class="fa fa-youtube-play"></i> [Online Educational Videos](https://www.youtube.com/channel/UCpgI0gGaIli_fDZVqzrw5Mg?view_as=subscriber)
+
+## Skills {#skills}
+
+-   Teaching skills: interactive learning, curriculum design, online pedagogy
+
+-   Research skills: evidence synthesis (systematic reviews, meta-analysis), knowledge translation, statistics with R
+
+-   Leadership skills: project management, agile, scrum, transformational and servant leadership
+
+## Academic metrics {#metrics}
+
+h-index: `r h_index`<br/> Publications: `r nrow(pubs)`<br/> Citations: `r total_citations`<br/> Last updated: `r format(as.Date(Sys.time()), "%d %b %Y")`<br/> via Scopus
+
+# Main
+
+## Michael Noetel, PhD {#title}
+
+### **Senior Lecturer and High Performance Psychologist**
+
+With my work, I want to do the most good that I can. Through my career, I want to help others do the same. For those who want to improve the world, I provide the knowledge and skills so they can do it best. I use methods like systematic reviews and meta-analyses to try and figure out the best approach to problems. Then I use online educational interventions to deploy those approaches cost-effectively, at scale. I use theory and evidence to make those interventions compelling, time-efficient, and effective.
+
+**Summary of Teaching**
+
+I use evidence-informed decision-making both in the content of what I teach and in the process of how I teach. I teach students how to think critically using evidence, and I build professional skills supported by systematic reviews. I use the same philosophy in my own teaching, using pedagogical approaches supported by top level evidence. I lead others to follow this approach, both through collaborations and coaching programs I established.
+
+*Leadership*
+
+-   Led or mentored lead for 6 university teaching development grants (totalling \$134,750)
+-   Co-founded [INSPIRE](https://www.inspiretoolkit.com.au/), a world-first evidence-centre for learning and teaching in universities. We create, curate, and disseminate evidence for what works in higher ed.
+-   National Lecturer-in-Charge for four different courses, leading the curriculum, resource development, and accreditation in each for up to four years.
+
+*Accolades*
+
+-   Received 9 awards for teaching including an [AAUT](https://www.universitiesaustralia.edu.au/policy-submissions/teaching-learning-funding/australian-awards-for-university-teaching/), a [SFHEA](https://www.advance-he.ac.uk/fellowship/senior-fellowship), and a [VC's Award](https://staff.acu.edu.au/our_university/learning_and_teaching/grants-and-awards/citations-and-awards/vc-teaching-awards)
+-   Average student evaluations of learning and teaching of 4.8 / 5 after 2,390 students
+
+**Summary of Research**
+
+I have research experience on large projects with many stakeholders, complex issues, and international research teams. To meet those challenges, I use best-in-class research management processes to do rigorous, impactful, and reproducible work (e.g., Asana, [Agile](https://www.nature.com/articles/d41586-019-01184-9) research, Scrum). I use my subject matter expertise in leadership and high performance psychology to help my teams to do high-performance research.
+
+*Grants*
+
+-   Chief investigator on \$3,694,120 of competitive Category 1 grants
+-   Average yearly grant income over 3x higher than the sector weighted benchmark
+-   Grant collaborators at University of Oxford, University of British Columbia, University of Helsinki, University of Birmingham, Northeastern University, & University of Otago
+
+*Publications*
+
+-   Scopus m-index of `r round(m_index,1)` where \> 2 ['characterizes outstanding scientists, likely to be found only at the top universities or major research laboratories'](https://www.pnas.org/content/102/46/16569)
+-   [Category normalised citation index](http://help.prod-incites.com/inCites2Live/indicatorsGroup/aboutHandbook/usingCitationIndicatorsWisely/normalizedCitationImpact.html) of 3.7; 53% of papers in the top 10% for citations
+-   Published in the [SJR](https://www.scimagojr.com/) #1 journals for [psychology](https://psycnet.apa.org/record/2022-22515-003), [applied psychology](https://www.tandfonline.com/doi/abs/10.1080/1750984X.2017.1387803), [aging](https://www.sciencedirect.com/science/article/pii/S1568163722000332), [paediatrics](https://jamanetwork.com/journals/jamapediatrics/article-abstract/2779446), [education](https://journals.sagepub.com/doi/abs/10.3102/00346543211052329) ([three](https://journals.sagepub.com/doi/abs/10.3102/0034654321990713) [times](https://journals.sagepub.com/doi/abs/10.3102/0034654321997918)), and [sport science](https://bjsm.bmj.com/content/55/13/721.info) ([twice](https://bjsm.bmj.com/content/bjsports/early/2020/12/20/bjsports-2020-103277.full.pdf))
+
+*Impact & Engagement*
+
+-   Developed the content [for award winning](https://www.acu.edu.au/about-acu/news/2021/june/high-honour-for-iplay), [scalable physical activity program](https://www.impact.acu.edu.au/community/kids-heart-health-and-fitness-improved-by-school-program) (published in [JAMA Pediatrics](https://jamanetwork.com/journals/jamapediatrics/article-abstract/2779446)), delivered to 190 schools, helping over 50,000 students
+-   Developed the content for a [coach leadership and athlete resilience project](https://aheadofthegame.org.au/), scaled worldwide to 500 clubs and 20,000 boys
+-   All 4 current Cat. 1 grants have industry partners, such as the NSW Departments of Education and Health
+
+## Education {data-icon="graduation-cap" data-concise="true"}
+
+### **Doctor of Philosophy (Psychology)**
+
+Institute for Positive Psychology and Education<br/>Australian Catholic University
+
+North Sydney, NSW
+
+2019
+
+### **Masters of Applied Psychology (Sport and Exercise)**
+
+The University of Queensland
+
+St Lucia, QLD
+
+2010
+
+### **Bachelor of Science (Advanced, Honours)**
+
+Double Major: Psychology; Computational Science<br/>University of Sydney
+
+Camperdown, NSW
+
+2008
+
+## Academic Experience {data-icon="laptop"}
+
+### **Senior Lecturer - Research Focused**
+
+School of Health and Behavioural Sciences<br/>Australian Catholic University
+
+Banyo, QLD
+
+Present - 2021
+
+### **Senior Lecturer - Teaching and Research**
+
+School of Health and Behavioural Sciences<br/>Australian Catholic University
+
+Banyo, QLD
+
+2020
+
+### **Lecturer and Course Coordinator (Casual)**
+
+Masters of Psychology (Sport and Exercise)<br/>University of Queensland
+
+St Lucia, QLD
+
+2021, 2019
+
+### **Lecturer - Teaching Focused**
+
+School of Health and Behavioural Sciences<br/>Australian Catholic University
+
+Strathfield, NSW
+
+2019 - 2015
+
+### **Research Fellow (Secondment; .4 FTE)**
+
+Institute for Positive Psychology and Education<br/>Australian Catholic University
+
+North Sydney, NSW
+
+2019 - 2018
+
+### **Sessional Academic**
+
+School of Exercise Science<br/>Australian Catholic University
+
+Strathfield, NSW
+
+2014 - 2013
+
+### **Tutor and Guest Lecturer**
+
+Schools of Psychology, Business, and Human Movement<br/>University of Queensland
+
+St Lucia, QLD
+
+2012 - 2009
+
+## Accreditations {data-icon="users"}
+
+### **Senior Fellow, Higher Education Academic (SFHEA)**
+
+AdvanceHE
+
+N/A
+
+Present - 2020
+
+### **Registered Psychologist**
+
+Australian Health Practitioner Regulation Agency
+
+N/A
+
+Present - 2012
+
+### **Endorsed Sport and Exercise Psychologist**
+
+Australian Health Practitioner Regulation Agency
+
+N/A
+
+Present - 2014
+
+### **Board Approved Supervisor**
+
+Australian Health Practitioner Regulation Agency
+
+N/A
+
+Present - 2015
+
+### **Member**
+
+Australian Psychological Society
+
+N/A
+
+2021 - 2012
+
+### **Fellow**
+
+College of Sport and Exercise Psychologists<br/>Australian Psychological Society
+
+N/A
+
+2021 - 2014
+
+## Awards {data-icon="award"}
+
+### **Vice-Chancellor's Award for Excellence in Teaching**
+
+Australian Catholic University
+
+N/A
+
+2021
+
+### **Vice-Chancellor's Staff Excellence Award: Excellence in Research & Research Partnership**
+
+Australian Catholic University
+
+N/A
+
+2021
+
+iPLAY Team
+
+### **Faculty of Health Sciences Employee Values Award**
+
+Australian Catholic University
+
+N/A
+
+2021
+
+### **Excellence and Innovation in Public Health Education and Research (Team Award)**
+
+Council of Academic Public Health Institutions Australasia
+
+N/A
+
+2021
+
+iPLAY Team
+
+### **Citation for Outstanding Contribution to Learning and Teaching (Team Award)**
+
+Australian Catholic University
+
+N/A
+
+2021
+
+Sport and Exercise Psychology Team
+
+### **Asics Best Overall Paper and Best Paper Award in Physical Activity and Health Promotion**
+
+Sports Medicine Australia e-Conference
+
+N/A
+
+2021
+
+Burn 2 Learn Team
+
+### **Citation for Outstanding Contributions to Student Learning**
+
+Australian Awards for University Teaching
+
+N/A
+
+2020
+
+### **Best presentation in Educational Technology theme**
+
+2020 Scholarship of Tertiary Teaching Conference, CQUniversity
+
+N/A
+
+2020
+
+### **Citations for Outstanding Contributions to Student Learning**
+
+Australian Catholic University
+
+N/A
+
+2019
+
+### **Citation for Outstanding Contribution to Learning and Teaching (Team Award)**
+
+Australian Catholic University, Faculty of Health Sciences
+
+N/A
+
+2017
+
+### **Citations (Early Career) for Outstanding Contributions to Student Learning**
+
+Australian Catholic University
+
+N/A
+
+2015
+
+### **Citations (Early Career) for Outstanding Contributions to Student Learning**
+
+Australian Catholic University, Faculty of Health Sciences
+
+N/A
+
+2015
+
+### **Official Commendation for Teaching Excellence**
+
+Faculty of Social and Behavioural Science, University of Queensland
+
+N/A
+
+2011
+
+### **Tutor Excellence Award**
+
+School of Psychology, University of Queensland
+
+N/A
+
+2010
+
+## Teaching Responsibilities and Evaluations {data-icon="users"}
+
+### **Psychological Skills Training Techniques in Sport (PSYC7725)**
+
+Course Coordinator
+
+N/A
+
+2023, 2021
+
+Postgraduate, [parallel](https://itali.uq.edu.au/teaching-guidance/learning-spaces-and-modes/parallel-teaching), 10 students
+
+### **Introduction to Applied Practice in Sport & Exercise Psychology (PSYC7775)**
+
+Course Coordinator
+
+N/A
+
+2021, 2019
+
+Postgraduate, [parallel](https://itali.uq.edu.au/teaching-guidance/learning-spaces-and-modes/parallel-teaching), 8 students
+
+### **Leadership and Culture in High Performance Settings**
+
+National Lecturer in Charge
+
+N/A
+
+2020
+
+Postgraduate, online, \~90 students
+
+### **Exercise and Lifestyle Counselling**
+
+National Lecturer in Charge
+
+N/A
+
+2020 - 2014
+
+Postgraduate, blended learning, \~30 students / year
+
+### **Research Design and Statistics**
+
+Lecturer in Charge
+
+N/A
+
+2019
+
+Third-year, face-to-face, \~30 students / year
+
+### **Advanced Topics in Applied Psychology**
+
+Lecturer in Charge
+
+N/A
+
+2018
+
+Honors, face-to-face, \~20 students / year
+
+### **Health and Exercise Psychology**
+
+National Lecturer in Charge
+
+N/A
+
+2017 - 2013
+
+Second-year, blended learning, \~150 students / year
+
+### **Psychology of Sport and Physical Activity**
+
+National Lecturer in Charge / Lecturer
+
+N/A
+
+2017 - 2013
+
+First-year, face-to-face, \~350 students / year
+
+### **Student Evaluations of Course and Teacher**
+
+<img src="selts_plot.png" alt="Average rating from almost 3,000 students: 4.8/5"/>
+
+N/A
+
+2020 - 2013
+
+## Teaching Development Grants {data-icon="file-invoice-dollar"}
+
+### INSPIRE: Initiative to support the integration of research in education
+
+Funded Project from the Australian Catholic University Provost's Office
+
+N/A
+
+2021
+
+**Noetel, M.**, Mahoney, J., Challinor, K., & Barnett, D.
+
+--- \$49,750
+
+### Enhancing student placement experience through the supervisor relationship
+
+Australian Catholic University Teaching Development Grant
+
+N/A
+
+2019
+
+Spathis, J. Mahoney, J., & **Noetel, M.**
+
+--- \$20,000
+
+### Improving student engagement through tutor training and support
+
+Australian Catholic University Teaching Development Grant
+
+N/A
+
+2018
+
+Sweeney, M., **Noetel, M.**, & Mahoney, J.
+
+--- \$20,000
+
+### Growth mindset versus direct instruction for persistence and achievement in an undergraduate STEM course
+
+Faculty of Health Sciences Teaching Development Grant
+
+N/A
+
+2018
+
+Moresi, M., **Noetel, M.**, & Taylor, P.
+
+--- \$5,000
+
+### Closing the gap: The effects of good feedback practices on student learning, motivation, and achievement in first year exercise science.
+
+Australian Catholic University Teaching Development Grant
+
+N/A
+
+2017
+
+Mahoney, J., **Noetel, M.**, Wilcox, A., & Sweeney, M.
+
+--- \$20,000
+
+### Flipped, online or face-to-face: A mixed methods, cluster-randomised trial of lecture format
+
+Australian Catholic University Teaching Development Grant
+
+N/A
+
+2015
+
+**Noetel, M.**, Pink, M., Stynes, J., Aumand, E., & Pepping, G.-J.
+
+--- \$20,000
+
+## Publications {data-icon="file"}
+
+```{r results = "asis", echo = FALSE, message = FALSE }
+
+publications
+
+```
+
+
+## Media coverage {data-icon="newspaper"}
+
+### Effective altruism
+
+<a href = "https://www.abc.net.au/religion/the-case-for-effective-altruism/13359912"> ABC Religion & Ethics</a>, <a href = "https://www.abc.net.au/news/2022-01-09/are-we-making-a-difference-when-we-donate-to-charity/100722158"> ABC Radio National</a>, 2GB, ABC Radio Canberra, ABC Radio Hobart
+
+N/A
+
+2021
+
+### Videos in higher education
+
+<a href = "https://www.forbes.com/sites/nickmorrison/2021/02/17/students-get-better-grades-if-you-replace-their-teachers-with-videos/?sh=3f5256385079"> Forbes</a>, <a href = "https://theconversation.com/videos-wont-kill-the-uni-lecture-but-they-will-improve-student-learning-and-their-marks-142282"> The Conversation</a>, <a href = "https://www.altmetric.com/details/100294946/news"> and others, see Altmetric</a>
+
+N/A
+
+2020
+
+### Behavioural response to COVID-19
+
+<a href = "https://theconversation.com/more-australians-are-worried-about-a-recession-and-an-increasingly-selfish-society-than-about-coronavirus-itself-135297"> The Conversation</a>, <a href = "https://www.abc.net.au/radio/newsradio/survey-finds-most-australians-with-symptoms-of/12390796">ABC News</a>, <a href = "https://www.canberratimes.com.au/story/6714504/more-australians-are-worried-about-an-increasingly-selfish-society-than-coronavirus-itself/?cs=14258"> Canberra Times</a>
+
+N/A
+
+2020
+
+### Vigorous exercise during pregnancy
+
+<a href = "https://www.washingtonpost.com/health/vigorous-exercise-in-the-third-trimester-is-it-safe/2019/10/18/de5de322-e53d-11e9-b403-f738899982d2_story.html"> The Washington Post</a>, <a href = "https://theconversation.com/is-vigorous-exercise-safe-during-the-third-trimester-of-pregnancy-121762"> The Conversation</a>, <a href = "https://bmc.altmetric.com/details/64730473"> and others, see Altmetric</a>
+
+N/A
+
+2019
+
+## Research Supervision {data-icon="users"}
+
+### **Asghar Ahmadi**
+
+Doctor of Philosophy Candidate, Australian Catholic University
+
+N/A
+
+2023 - 2019
+
+Primary Supervisor
+
+### **Roberta Vasconcellos**
+
+Doctor of Philosophy Candidate, Australian Catholic University
+
+N/A
+
+Present - 2020
+
+Primary Supervisor
+
+### **Shantell Griffith**
+
+Doctor of Philosophy Candidate, The University of Queensland
+
+N/A
+
+Present - 2022
+
+Primary Supervisor
+
+### **Ghassani Swaryandini**
+
+Doctor of Philosophy Candidate, The University of Queensland
+
+N/A
+
+Present - 2022
+
+Primary Supervisor
+
+### **Anum Urooj**
+
+Doctor of Philosophy Candidate, Australian Catholic University
+
+N/A
+
+Present - 2022
+
+Associate Supervisor
+
+### **Ella Tremaine**
+
+Doctor of Philosophy Candidate, Australian Catholic University
+
+N/A
+
+Present - 2021
+
+Associate Supervisor
+
+### **Iris Kucuk**
+
+Master of Psychology (Clinical) Research Thesis, Australian Catholic University
+
+N/A
+
+2020
+
+Primary supervisor
+
+### **Laura Beddoe**
+
+Master of Psychology (Clinical) Research Thesis, Australian Catholic University
+
+N/A
+
+2020
+
+Primary supervisor
+
+### **Lauren Bischoff**
+
+Master of Psychology (Sport and Exercise) Research Thesis, University of Queensland
+
+N/A
+
+2021
+
+Primary supervisor
+
+### **Simon Pearson**
+
+Master of Psychology (Sport and Exercise) Research Thesis, University of Queensland
+
+N/A
+
+2020
+
+Co-supervisor
+
+## Research Grants {data-icon="file-invoice-dollar"}
+
+### Promotion of evidence-based physical activity for older adults and people with disabilities by health professionals
+
+National Health and Medical Research Council (PRC1: 2011157)
+
+N/A
+
+2025 - 2022
+
+Sherrington, C., Hassett, L., Tiedemann, A., Harvey, L., Pinheiro, M., Howard, K., Phongsavan, P., Haynes, A., **Noetel, M.**, Reece, L.
+
+--- \$1,440,375
+
+### Effectiveness and cost effectiveness of a time-efficient school-based physical activity intervention for adolescents living with disability
+
+Medical Research Future Fund (MRFF: 2007095)
+
+N/A
+
+2023 - 2021
+
+Lubans, D., Shields, N., Hillman, C., Lonsdale, C., Eather, N., Smith, J., **Noetel, M.**, Reeves, P., Leahy, A.
+
+--- \$736,399
+
+### Meta-review of what works in institutional decision-making: Campbell Collaboration Evidence and Gap Map
+
+Effective Altruism Infrastructure Fund
+
+N/A
+
+2022 - 2021
+
+**Noetel, M.**, Saeri, A., Slattery, P., Grundy, E.
+
+--- \$39,654
+
+### Square eyes or all lies? Understanding children's exposure to screens
+
+Australian Research Council Discovery Project (Ref: DP200101912)
+
+N/A
+
+2023 - 2020
+
+Lonsdale, C., Biddle, S., Parker, P., Doherty, A., Signal, L., Baranowski, T., Salmela-Aro, K., Stevens, R., Rissel, C., Sanders, T., del Pozo Cruz, B., **Noetel, M.**
+
+--- \$658,544
+
+### PLAY for Inclusion --- Teachers working with children with intellectual disability
+
+Move It AUS - Participation Grants Program (Ref: PAR006502018)
+
+N/A
+
+2020 - 2019
+
+**Noetel, M.**, Lonsdale, C., Temple, V., Tracey, V., Bennie, A., & Lubans, D.
+
+--- \$268,802
+
+### Engaging students during the early years of secondary school (iTEACH Project)
+
+Australian Research Council Discovery Project (Ref: DP160102625)
+
+N/A
+
+2020 - 2016
+
+Lonsdale, C., Diezmann, C., Ntoumanis, N., Yeung, A., Ryan, R., Beauchamp, M., Maeder, A. & **Noetel, M.**
+
+--- \$590,000
+
+### iPLAY Sporting Schools
+
+Australian Sports Commission.
+
+N/A
+
+2019
+
+Lonsdale, C., **Noetel, M.**, Sanders, T., Parker, P., Lubans, D., Morrison, R. Boyer, J., & King, L.
+
+--- \$109,091
+
+### Ahead Of The Game: Motivating Queensland swimmers for better health and performance
+
+Sport Performance Innovation and Knowledge Excellence (SPIKE) program<br/>Queensland Academy of Sport
+
+N/A
+
+2020 - 2019
+
+Mahoney, J., **Noetel, M.**, Vella, S., & Lonsdale, C.
+
+--- \$7,416
+
+### iPLAY Sporting Schools pilot
+
+Sport Australia
+
+N/A
+
+2019
+
+Lonsdale, C., Sanders, T., **Noetel, M.**, Parker, P., & Lubans, D.
+
+--- \$49,587
+
+### iPLAY nutrition module
+
+New South Wales Department of Education
+
+N/A
+
+2018
+
+Lonsdale, C., **Noetel, M.**, Sanders, T., Ronto, R., & Parker, P.
+
+--- \$12,650
+
+### Thinking While Moving in English
+
+New South Wales Department of Education
+
+N/A
+
+2018
+
+Lonsdale, C. & **Noetel, M.**
+
+--- \$10,000
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+c1_grants <- c("1,440,375","736,399","658,544", "268,802", "590,000")
+c1_grants <- gsub(",","",c1_grants)
+c1_grants <- as.numeric(c1_grants)
+#format(sum(c1_grants), big.mark = ",")
+```
+
+## Service {data-icon="comments"}
+
+### **The University of Queensland**
+
+Program Director, Master of Psychology<br/>School of Psychology
+
+N/A
+
+Current - 2023
+
+### **The University of Queensland**
+
+Higher Degree Research Committee<br/>School of Psychology
+
+N/A
+
+Current - 2023
+
+### **The University of Queensland**
+
+Postgraduate Training Committee<br/>School of Psychology
+
+N/A
+
+Current - 2023
+
+### **Australian Catholic University**
+
+Steering Committee Chair<br/>INSPIRE Program
+
+N/A
+
+2022 - 2020
+
+### **Australian Catholic University**
+
+Steering Committee Chair<br/>INSPIRE Program
+
+N/A
+
+2022 - 2020
+
+### **Australian Catholic University**
+
+Faculty Board<br/>Faculty of Health Sciences
+
+N/A
+
+2021 - 2020
+
+### **Australian Catholic University**
+
+Higher Degree Research Committee<br/>Institute for Positive Psychology and Education
+
+N/A
+
+2022 - 2019
+
+### **Australian Catholic University**
+
+National Team Leader<br/>Sport, Health, and Exercise Psychology Units
+
+N/A
+
+2020 - 2013
+
+## Engagement {data-icon="comments"}
+
+### **Australian Institute of Sport**
+
+National Quality Assurance Steering Committee
+
+N/A
+
+2022 - 2021
+
+### **Australian Psychological Society (APS)**
+
+College of Sport and Exercise Psychologists (CSEP)
+
+N/A
+
+2021 - 2015
+
+--- National Treasurer: 2015-2017; 2019-2021<br/> --- NSW Chair: 2015-2017<br/> --- QLD Chair: 2019-2021<br/>
+
+### **Effective Altruism Australia**
+
+Director and Chairperson
+
+N/A
+
+Present - 2021
+
+## Invited Presentations / Symposia {data-icon="chalkboard-teacher"}
+
+### **Berkeley Effective Altruism Winter Scholars Program**
+
+Invited workshop
+
+N/A
+
+2022
+
+### **Effective Altruism Global x Australia**
+
+Invited workshop, Invited presentation, and 'Fireside chat'
+
+N/A
+
+2022
+
+### **NASPSPA Annual Conference, Hawaii**
+
+Accepted symposia
+
+N/A
+
+2022
+
+### **Prevention of Falls Injuries Centre of Research Excellence**
+
+Invited workshop
+
+N/A
+
+2022
+
+### **Advance Higher Education Teaching and Learning Conference**
+
+Accepted presentation
+
+N/A
+
+2021
+
+### **Scholarship of Tertiary Teaching Conference, CQUniversity**
+
+Accepted presentation
+
+N/A
+
+2020
+
+### **Sports Medicine Australia Symposia**
+
+Invited panellist
+
+N/A
+
+2020
+
+### **Effective Altruism Global x Australia**
+
+Invited keynote
+
+N/A
+
+2019
+
+### **Association for Contextual Behavioural Sciences World Conference**
+
+Ignite presentation
+
+N/A
+
+2015
+
+### **Australian Psychological Society National Conference**
+
+Accepted presentation
+
+N/A
+
+2015
+
+### **Sports Medicine Australia National Conference**
+
+Invited presentation
+
+N/A
+
+2012
+
+## Continuing Professional Learning {data-icon="chalkboard-teacher"}
+
+### **Bayesian Statistics: From Concept to Data Analysis (with honors)**
+
+University of California, Santa Cruz
+
+N/A
+
+2021
+
+### **Organizational Leadership Specialization**
+
+Northwestern University<br>- High Performance Collaboration: Leadership, Teamwork, and Negotiation<br>- Leadership Communication for Maximum Impact: Storytelling<br>- Leadership Through Social Influence<br>- Leadership Through Marketing<br>- Leadership Through Design Innovation<br>- Organizational Leadership Capstone
+
+N/A
+
+2020
+
+### **Influencing Specialization: Storytelling, Change Management and Governance**
+
+Macquarie University<br>- Leading transformations: Manage change<br>- Negotiation skills: Negotiate and resolve conflict<br>- Storytelling and influencing: Communicate with impact<br>- Risk governance: Engage the board
+
+N/A
+
+2020
+
+### **Model Thinking**
+
+University of Michigan
+
+N/A
+
+2020
+
+### **Introduction to Translational Science**
+
+University of Rochester
+
+N/A
+
+2020
+
+### **Psychological First Aid**
+
+Johns Hopkins University
+
+N/A
+
+2020
+
+### **Effective Altruism**
+
+Princeton University
+
+N/A
+
+2020
+
+### **Scrum Fundamentals**
+
+Udemy <!-- <a href = "https://www.udemy.com/certificate/UC-e3a23908-6b6a-4879-85ad-08043f9f6cf9/">Udemy</a> -->
+
+N/A
+
+2020
+
+### **A Crash Course in Causality: Inferring Causal Effects from Observational Data**
+
+University of Pennsylvania
+
+N/A
+
+2018
+
+### **Data Science Specialization**
+
+Johns Hopkins University<br>- Data Science Capstone<br>- The Data Scientist's Toolbox<br>- Getting and Cleaning Data<br>- Reproducible Research<br>- Developing Data Products<br>- Practical Machine Learning<br>- Regression Models<br>- Exploratory Data Analysis<br>- Statistical Inference<br>- R Programming
+
+N/A
+
+2018
+
+### **Conducting an Intervention Review**
+
+Cochrane
+
+N/A
+
+2017
+
+### **Documentary Masterclass**
+
+Australian Film Television and Radio School
+
+N/A
+
+2017
+
+### **Learning How to Learn: Powerful mental tools to help you master tough subjects**
+
+McMaster University & University of California San Diego
+
+N/A
+
+2017
+
+### **Board Approved Supervisor Training: Refresher and Masterclass**
+
+Australian Psychological Society
+
+N/A
+
+2016
+
+### **Gamification**
+
+University of Pennsylvania
+
+N/A
+
+2015
+
+### **Learning to Teach Online**
+
+University of New South Wales
+
+N/A
+
+2014
