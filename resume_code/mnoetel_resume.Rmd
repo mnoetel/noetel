@@ -21,6 +21,7 @@ output:
 ```{r data-load, message=FALSE, warning=FALSE, echo=FALSE}
 library(tidyverse); library(pagedown); library(rcrossref); library(cli); library(rscopus)
 
+library(metafor)
 # Mike
 scopus_id <- "57190857713"
 #Zan
