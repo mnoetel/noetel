@@ -20,5 +20,7 @@ options(
   blogdown.method = 'html'
 )
 
+Sys.setenv(Elsevier_API = "27c7a3751e0f0fb8241cea87c1fad474")
+
 # fix Hugo version
 options(blogdown.hugo.version = "0.95.0")

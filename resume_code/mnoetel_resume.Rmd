@@ -75,8 +75,7 @@ calc_h_index = function(cites) {
   tail(which(cites >= seq_along(cites)), 1)
 }
 h_index <- calc_h_index(pubs$cites)
-m_index <- h_index / (lubridate::interval("2015-10-10", Sys.time()) / lubridate::years(1))
-#m_index <- h_index / (lubridate::interval("2019-05-10", Sys.time()) / lubridate::years(1))
+m_index <- h_index / (lubridate::interval("2019-05-10", Sys.time()) / lubridate::years(1))
 
 pubs$cites = ifelse(pubs$cites == 0, "N/A", paste("---",pubs$cites))
 
