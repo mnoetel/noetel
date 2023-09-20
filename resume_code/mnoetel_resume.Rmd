@@ -21,13 +21,9 @@ output:
 ```{r data-load, message=FALSE, warning=FALSE, echo=FALSE}
 library(tidyverse); library(pagedown); library(rcrossref); library(cli); library(rscopus)
 
-library(metafor)
-# Mike
 scopus_id <- "57190857713"
-#Zan
-#scopus_id <- "55584127400"
-# Remember to sign into the VPN to get the API to work
-api_key <-  Sys.getenv('Elsevier_API')
+# Zan scopus_id <- "55584127400"
+api_key = Sys.getenv('Elsevier_API')
 df <- author_data(au_id = scopus_id,
                    verbose = FALSE)
 pubs <- df$df %>%
@@ -430,9 +426,9 @@ Course Coordinator
 
 N/A
 
-2023, 2021
+Current - 2021
 
-Postgraduate, [parallel](https://itali.uq.edu.au/teaching-guidance/learning-spaces-and-modes/parallel-teaching), 10 students
+Postgraduate, 10 students
 
 ### **Introduction to Applied Practice in Sport & Exercise Psychology (PSYC7775)**
 
@@ -440,9 +436,19 @@ Course Coordinator
 
 N/A
 
-2021, 2019
+Current - 2021
 
-Postgraduate, [parallel](https://itali.uq.edu.au/teaching-guidance/learning-spaces-and-modes/parallel-teaching), 8 students
+Postgraduate, 10 students
+
+### **Master of Psychology Dissertation (PSYC7811)**
+
+Course Coordinator
+
+N/A
+
+2023
+
+Postgraduate, ~40 students
 
 ### **Leadership and Culture in High Performance Settings**
 
@@ -908,14 +914,6 @@ N/A
 
 ### **Australian Catholic University**
 
-Steering Committee Chair<br/>INSPIRE Program
-
-N/A
-
-2022 - 2020
-
-### **Australian Catholic University**
-
 Faculty Board<br/>Faculty of Health Sciences
 
 N/A
@@ -966,7 +964,23 @@ N/A
 
 Present - 2021
 
+### **Effective Altruism Global x Australia Conference**
+
+Organising Committee
+
+N/A
+
+2023
+
 ## Invited Presentations / Symposia {data-icon="chalkboard-teacher"}
+
+### **Effective Altruism Global x Australia Conference**
+
+Invited workshops x 2, Keynote Coordinator and MC
+
+N/A
+
+2023
 
 ### **Berkeley Effective Altruism Winter Scholars Program**
 
@@ -976,7 +990,7 @@ N/A
 
 2022
 
-### **Effective Altruism Global x Australia**
+### **Effective Altruism Global x Australia Conference**
 
 Invited workshop, Invited presentation, and 'Fireside chat'
 
