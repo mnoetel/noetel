@@ -75,6 +75,8 @@ m_index <- h_index / (lubridate::interval("2019-05-10", Sys.time()) / lubridate:
 
 pubs$cites = ifelse(pubs$cites == 0, "N/A", paste("---",pubs$cites))
 
+pubs$number[pubs$number == ""] <- "*Advance online publication*"
+
 #pubs$journal <- stringr::str_to_title(pubs$journal)
 
 pattern = "### {first_author} ({year}). {title}. {journal}, {number}
@@ -154,7 +156,7 @@ I have research experience on large projects with many stakeholders, complex iss
 
 -   Scopus m-index of `r round(m_index,1)` where \> 2 ['characterizes outstanding scientists, likely to be found only at the top universities or major research laboratories'](https://www.pnas.org/content/102/46/16569)
 -   [Category normalised citation index](http://help.prod-incites.com/inCites2Live/indicatorsGroup/aboutHandbook/usingCitationIndicatorsWisely/normalizedCitationImpact.html) of 3.7; 53% of papers in the top 10% for citations
--   Published in the [SJR](https://www.scimagojr.com/) #1 journals for [psychology](https://psycnet.apa.org/record/2022-22515-003), [applied psychology](https://www.tandfonline.com/doi/abs/10.1080/1750984X.2017.1387803), [aging](https://www.sciencedirect.com/science/article/pii/S1568163722000332), [paediatrics](https://jamanetwork.com/journals/jamapediatrics/article-abstract/2779446), [education](https://journals.sagepub.com/doi/abs/10.3102/00346543211052329) ([three](https://journals.sagepub.com/doi/abs/10.3102/0034654321990713) [times](https://journals.sagepub.com/doi/abs/10.3102/0034654321997918)), and [sport science](https://bjsm.bmj.com/content/55/13/721.info) ([twice](https://bjsm.bmj.com/content/bjsports/early/2020/12/20/bjsports-2020-103277.full.pdf))
+-   Published in the [SJR](https://www.scimagojr.com/) #1 journals for [psychology](https://psycnet.apa.org/record/2022-22515-003), [experimental psychology](https://www.nature.com/articles/s41562-023-01712-8), [aging](https://www.sciencedirect.com/science/article/pii/S1568163722000332), [paediatrics](https://jamanetwork.com/journals/jamapediatrics/article-abstract/2779446), [education](https://journals.sagepub.com/doi/abs/10.3102/00346543211052329) ([three](https://journals.sagepub.com/doi/abs/10.3102/0034654321990713) [times](https://journals.sagepub.com/doi/abs/10.3102/0034654321997918)), and [sport science](https://bjsm.bmj.com/content/55/13/721.info) ([twice](https://bjsm.bmj.com/content/bjsports/early/2020/12/20/bjsports-2020-103277.full.pdf))
 
 *Impact & Engagement*
 
@@ -420,7 +422,7 @@ N/A
 
 ## Teaching Responsibilities and Evaluations {data-icon="users"}
 
-### **Psychological Skills Training Techniques in Sport (PSYC7725)**
+### **Psychological Skills Training Techniques in Sport**
 
 Course Coordinator
 
@@ -430,7 +432,7 @@ Current - 2021
 
 Postgraduate, 10 students
 
-### **Introduction to Applied Practice in Sport & Exercise Psychology (PSYC7775)**
+### **Introduction to Applied Practice in Sport & Exercise Psychology**
 
 Course Coordinator
 
@@ -440,13 +442,13 @@ Current - 2021
 
 Postgraduate, 10 students
 
-### **Master of Psychology Dissertation (PSYC7811)**
+### **Master of Psychology Dissertation**
 
 Course Coordinator
 
 N/A
 
-2023
+Current - 2023
 
 Postgraduate, ~40 students
 
@@ -509,14 +511,6 @@ N/A
 2017 - 2013
 
 First-year, face-to-face, \~350 students / year
-
-### **Student Evaluations of Course and Teacher**
-
-<img src="selts_plot.png" alt="Average rating from almost 3,000 students: 4.8/5"/>
-
-N/A
-
-2020 - 2013
 
 ## Teaching Development Grants {data-icon="file-invoice-dollar"}
 
@@ -751,6 +745,18 @@ Sherrington, C., Hassett, L., Tiedemann, A., Harvey, L., Pinheiro, M., Howard, K
 
 --- \$1,440,375
 
+### Protyping a co-designed effective altruism program: Thinking Skills for Global Change
+
+Open Philanthropy
+
+N/A
+
+2023 - 2022
+
+**Noetel, M.**
+
+--- \$58,000
+
 ### Effectiveness and cost effectiveness of a time-efficient school-based physical activity intervention for adolescents living with disability
 
 Medical Research Future Fund (MRFF: 2007095)
@@ -872,10 +878,21 @@ Lonsdale, C. & **Noetel, M.**
 --- \$10,000
 
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
-c1_grants <- c("1,440,375","736,399","658,544", "268,802", "590,000")
+
+c1_grants <- c("1,440,375", #PROMOTE_PA
+               "736,399", #Burn2Learn
+               "658,544", #Square eyes
+               "268,802", #iplay4i
+               "590,000") # iteach
 c1_grants <- gsub(",","",c1_grants)
 c1_grants <- as.numeric(c1_grants)
+
+# Oldest to newest
+other_grants <- c("10,000", "12,650", "49,587", "7,416", "109,091", "39,654", "58,000")
+other_grants <- as.numeric(gsub(",","",other_grants))
+
 #format(sum(c1_grants), big.mark = ",")
+#format(sum(c1_grants)+sum(other_grants), big.mark = ",")
 ```
 
 ## Service {data-icon="comments"}
@@ -1071,6 +1088,14 @@ N/A
 2012
 
 ## Continuing Professional Learning {data-icon="chalkboard-teacher"}
+
+### **Governance Foundations for Not-for-Profit Directors**
+
+Australian Institute of Company Directors
+
+N/A
+
+2023
 
 ### **Bayesian Statistics: From Concept to Data Analysis (with honors)**
 
