@@ -102,7 +102,7 @@ publications = glue::glue(pattern, .envir = as.environment(pubs)) %>%
 
 ## Contact Info {#contact}
 
--   <i class="fa fa-envelope"></i> [michael.noetel\@acu.edu.au](mailto:michael.noetel@acu.edu.au){.email}
+-   <i class="fa fa-envelope"></i> [m.noetel@uq.edu.au](mailto:m.noetel@uq.edu.au){.email}
 -   <i class="fa fa-globe-asia"></i> [Website](http://noetel.com.au)
 -   <i class="fa fa-phone"></i> +61 414 822 353
 -   <i class="fa fa-youtube-play"></i> [Online Educational Videos](https://www.youtube.com/channel/UCpgI0gGaIli_fDZVqzrw5Mg?view_as=subscriber)
