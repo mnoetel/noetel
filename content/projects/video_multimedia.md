@@ -3,7 +3,7 @@ date: "2016-11-05T19:56:17+05:30"
 draft: false
 image: img/portfolio/video.jpg
 showonlyimage: false
-title: Video and Multimedia
+title: Online Learning and Multimedia
 weight: 6
 ---
 

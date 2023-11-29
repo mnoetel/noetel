@@ -5,6 +5,7 @@ title: Get in touch
 
 #### I'm currently focusing on
 
+-   Using Artifical Intelligence to increase learning
 -   Training young people to tackle the world's most pressing problems, like existential risks
 -   Building researcher capabilities at scale
 -   Improving ethical reasoning and rationality at scale
@@ -12,7 +13,7 @@ title: Get in touch
 
 #### I might be able to help you by:
 
--   Creating evidence-based multimedia design, and engaging, effective training programs
+-   Creating evidence-based online learning design, and engaging, effective training programs
 -   Conducting efficient, effective, and robust systematic reviews / overviews of reviews
 -   Running sophisticated meta-analytic techniques like network meta-analysis or <a href = "https://cran.r-project.org/web/packages/metaSEM/vignettes/Examples.html">meta-analytic structural equation models</a>
 -   Being an <a href = "https://www.nature.com/articles/d41586-019-01184-9">agile</a>, autonomy supportive <a href = "https://psycnet.apa.org/record/2018-24069-001">leader</a> and <a href = "https://www.sciencedirect.com/science/article/abs/pii/S0001879120300841">supervisor</a>
