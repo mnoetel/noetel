@@ -35,8 +35,6 @@ pubs <- df$df %>%
   rename(journal = prism_publication_name,
          doi = prism_doi,
          title = dc_title,
-         volume = prism_volume,
-         issue = prism_issue_identifier,
          cites = citedby_count,
          first_author = dc_creator) %>%
   filter(journal != "ACU Research Bank" & 
@@ -44,11 +42,7 @@ pubs <- df$df %>%
            journal != "The Health & Fitness Journal of Canada") %>% 
   mutate(year = year(as.Date(prism_cover_date))) %>%
   filter(!is.na(year)) %>% #filter(year < 2020) %>%
-  mutate(number = ifelse(is.na(volume),
-                         "",
-                         paste0("*",volume,"*","(",issue,")"))) %>%
-  mutate(number = gsub("\\(NA\\)","",number),
-         journal = paste0("*",journal,"*"),
+  mutate(journal = paste0("*",journal,"*"),
          cite_word = ifelse(cites == 1, "citation","citations"),
          cite_word = ifelse(cites == 0, "", cite_word),
          cites = as.numeric(cites),
@@ -75,11 +69,9 @@ m_index <- h_index / (lubridate::interval("2019-05-10", Sys.time()) / lubridate:
 
 pubs$cites = ifelse(pubs$cites == 0, "N/A", paste("---",pubs$cites))
 
-pubs$number[pubs$number == ""] <- "*Advance online publication*"
-
 #pubs$journal <- stringr::str_to_title(pubs$journal)
 
-pattern = "### {first_author} ({year}). {title}. {journal}, {number}
+pattern = "### {first_author} ({year}). {title}. {journal}
 
 {cites} {cite_word}
 
@@ -604,6 +596,15 @@ publications
 
 
 ## Media coverage {data-icon="newspaper"}
+
+I've worked to get my research out into the public to change practice. For example, I was invited on <a href = "https://www.youtube.com/watch?v=mEERjOv6pJA">national primetime TV</a> for my paper in <a href = "https://www.nature.com/articles/s41562-023-01712-8">Nature Human Behaviour</a>.
+
+### Exercise for depression
+<a href = "https://www.cnn.com/2024/02/14/health/exercise-treat-depression-wellness/index.html">CNN</a>, <a href="https://www.thetimes.co.uk/article/d1236a53-6ab4-4f32-bc64-730823dbbfaf?shareToken=227838c1a4d352d416b37fb188f768fe">The Times</a>, BBC, Good Morning America, <a href = "https://www.theaustralian.com.au/nation/worlds-biggest-study-shows-exercise-can-be-five-times-as-effective-as-ssris/news-story/e1bb1699c0019674aa98047d1c431efa">The Australian</a>, <a href = "https://theconversation.com/running-or-yoga-can-help-beat-depression-research-shows-even-if-exercise-is-the-last-thing-you-feel-like-223441">The Conversation</a>, <a href = "https://www.abc.net.au/listen/programs/healthreport/how-good-is-exercise-for-depression/103521102">ABC Radio National</a>, Triple J, Triple M, Hit Radio and <a href = "https://bmj.altmetric.com/details/159533224/#score">more</a>
+
+N/A
+
+2024
 
 ### Effective altruism
 
