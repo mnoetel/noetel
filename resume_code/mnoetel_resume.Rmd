@@ -115,7 +115,7 @@ h-index: `r h_index`<br/> Publications: `r nrow(pubs)`<br/> Citations: `r total_
 
 ## Michael Noetel, PhD {#title}
 
-### **Senior Lecturer and High Performance Psychologist**
+### **Academic and High Performance Psychologist**
 
 With my work, I want to do the most good that I can. Through my career, I want to help others do the same. For those who want to improve the world, I provide the knowledge and skills so they can do it best. I use methods like systematic reviews and meta-analyses to try and figure out the best approach to problems. Then I use online educational interventions to deploy those approaches cost-effectively, at scale. I use theory and evidence to make those interventions compelling, time-efficient, and effective.
 
@@ -184,13 +184,21 @@ Camperdown, NSW
 
 ## Academic Experience {data-icon="laptop"}
 
+### **Associate Professor - Teaching and Research**
+
+School of Psychology<br/>The University of Queensland
+
+St Lucia, QLD
+
+Present - 2025
+
 ### **Senior Lecturer - Teaching and Research**
 
 School of Psychology<br/>The University of Queensland
 
 St Lucia, QLD
 
-Present - 2022
+2024 - 2022
 
 ### **Senior Lecturer - Research Focused**
 
