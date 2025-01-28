@@ -916,19 +916,12 @@ other_grants <- as.numeric(gsub(",","",other_grants))
 
 ### **The University of Queensland**
 
-Program Director, Master of Psychology<br/>School of Psychology
+Program Director (Academic), Master of Psychology<br/>School of Psychology
 
 N/A
 
 Current - 2023
 
-### **The University of Queensland**
-
-Higher Degree Research Committee<br/>School of Psychology
-
-N/A
-
-Current - 2023
 
 ### **The University of Queensland**
 
@@ -937,6 +930,22 @@ Postgraduate Training Committee<br/>School of Psychology
 N/A
 
 Current - 2023
+
+### **<a href = "https://www.apa.org/pubs/journals/spy">Sport, Exercise and Performance Psychology</a>**
+
+Editorial Board Member
+
+N/A
+
+Current - 2025
+
+### **The University of Queensland**
+
+Higher Degree Research Committee<br/>School of Psychology
+
+N/A
+
+2024 - 2023
 
 ### **Australian Catholic University**
 
